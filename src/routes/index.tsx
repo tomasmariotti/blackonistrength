@@ -9,8 +9,6 @@ import imgFunc from "@/assets/funcional.jpg";
 import imgGym1 from "@/assets/gym-1.jpg";
 import imgGym2 from "@/assets/gym-2.jpg";
 import imgGym3 from "@/assets/gym-3.jpg";
-import imgCoachP from "@/assets/coach-paco.jpg";
-import imgCoachA from "@/assets/coach-ana.jpg";
 import imgCafe from "@/assets/cafe.jpg";
 import oniMark from "@/assets/oni-mark.jpg";
 
@@ -76,7 +74,6 @@ function Index() {
       <Sobre />
       <Especialidades />
       <Instalaciones />
-      <Team />
       <Testimonios />
       <Horarios />
       <Tarifas />
@@ -454,95 +451,6 @@ function Instalaciones() {
   );
 }
 
-/* ---------- TEAM ---------- */
-const team = [
-  {
-    name: "Paco",
-    role: "Head Coach · Fuerza",
-    img: imgCoachP,
-    quote: "La fuerza no se entrena. Se construye.",
-    specs: ["Powerlifting", "Programación", "Rendimiento"],
-    stats: [{ k: "Años", v: "10+" }, { k: "Atletas", v: "200+" }],
-  },
-  {
-    name: "Ana",
-    role: "Owner · Coach",
-    img: imgCoachA,
-    quote: "Aquí entrena gente real. Y se nota.",
-    specs: ["Hipertrofia", "Movilidad", "Comunidad"],
-    stats: [{ k: "Años", v: "8+" }, { k: "Comunidad", v: "365 días" }],
-  },
-];
-
-function Team() {
-  return (
-    <section id="team" className="py-32 lg:py-44 bg-card/30 relative overflow-hidden">
-      <div className="absolute inset-0 bg-radial-glow opacity-30" />
-      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
-        <div className="mb-16">
-          <Reveal>
-            <div className="text-[10px] uppercase tracking-[0.4em] text-primary mb-4">
-              04 — Coaches
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <h2 className="font-display text-5xl lg:text-7xl leading-[0.95]">
-              El equipo <br />
-              detrás del <span className="text-primary text-glow">templo</span>.
-            </h2>
-          </Reveal>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8">
-          {team.map((m, i) => (
-            <Reveal key={m.name} delay={i * 150}>
-              <article className="group relative overflow-hidden rounded-sm border border-border bg-background">
-                <div className="grid grid-cols-5">
-                  <div className="col-span-2 relative overflow-hidden">
-                    <img
-                      src={m.img}
-                      alt={m.name}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/80" />
-                  </div>
-                  <div className="col-span-3 p-8 lg:p-10">
-                    <div className="text-[10px] uppercase tracking-[0.3em] text-primary">
-                      {m.role}
-                    </div>
-                    <h3 className="font-display text-5xl mt-2">{m.name}</h3>
-                    <p className="mt-5 font-jp italic text-lg text-foreground/90 leading-snug">
-                      « {m.quote} »
-                    </p>
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {m.specs.map((s) => (
-                        <span key={s} className="text-[10px] uppercase tracking-[0.25em] px-2.5 py-1 border border-border text-muted-foreground">
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-8 grid grid-cols-2 gap-4">
-                      {m.stats.map((s) => (
-                        <div key={s.k}>
-                          <div className="font-display text-3xl text-primary">{s.v}</div>
-                          <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                            {s.k}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- TESTIMONIOS ---------- */
 const reviews = [
   {
@@ -626,7 +534,7 @@ function Horarios() {
         <Reveal>
           <div>
             <div className="text-[10px] uppercase tracking-[0.4em] text-primary mb-4">
-              06 — Horarios
+              05 — Horarios
             </div>
             <h2 className="font-display text-5xl lg:text-6xl leading-[0.95]">
               Abierto <br />
@@ -690,7 +598,7 @@ function Tarifas() {
         <div className="mb-16 max-w-3xl">
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.4em] text-primary mb-4">
-              07 — Tarifas
+              06 — Tarifas
             </div>
           </Reveal>
           <Reveal delay={100}>
@@ -773,7 +681,7 @@ function Eventos() {
         <div className="mb-16 max-w-3xl">
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.4em] text-primary mb-4">
-              08 — Eventos
+              07 — Eventos
             </div>
           </Reveal>
           <Reveal delay={100}>
